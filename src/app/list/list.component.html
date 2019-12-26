@@ -1,5 +1,12 @@
 <mat-toolbar>list Page</mat-toolbar>
 
 <ul *ngFor="let i of items">
-  <li>{{ i }}</li>
+  <ol>
+    <li>{{ i.name }}</li>
+    <li>{{ i.age }}</li>
+    <li>{{ i.place }}</li>
+  </ol>
 </ul>
+<div style="margin-top: 100px;margin-left: 100px;">
+  <a href="admin">GoTo Admin Page</a>
+</div>

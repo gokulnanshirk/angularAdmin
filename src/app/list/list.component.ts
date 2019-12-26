@@ -8,10 +8,12 @@ import { DataService } from "../data.service";
 })
 export class ListComponent implements OnInit {
   items: any;
-  constructor(private service: DataService) {
-    this.items = service.data;
-  }
+  constructor(private service: DataService) {}
   ngOnInit() {
-    
+    this.getData();
+  }
+  getData() {
+    this.items = this.service.get();
+    console.log(this.items);
   }
 }

@@ -7,6 +7,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { AdminComponent } from "./admin/admin.component";
 import { RouterModule, Routes } from "@angular/router";
 import { ListComponent } from './list/list.component';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: "", component: ListComponent },
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     NoopAnimationsModule,
+    MatInputModule,
     MatToolbarModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

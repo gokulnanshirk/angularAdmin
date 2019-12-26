@@ -1,1 +1,10 @@
 <mat-toolbar>Admin Page</mat-toolbar>
+<div style="margin-left: 100px;">
+  <input type="text" placeholder="Name" [(ngModel)]="name" /><br />
+  <input type="text" placeholder="Age" [(ngModel)]="age" /><br />
+  <input type="text" placeholder="Place" [(ngModel)]="place" /><br />
+  <button (click)="submit()">Submit</button>
+  <div style="margin-top: 100px;">
+    <a href="">GoTo ListPage</a>
+  </div>
+</div>
