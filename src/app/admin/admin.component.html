@@ -4,16 +4,20 @@
   <input type="text" placeholder="Age" [(ngModel)]="age" /><br />
   <input type="text" placeholder="Place" [(ngModel)]="place" /><br />
   <button (click)="submit()">Submit</button> -->
-  <div style="margin-top: 100px;">
-    <a href="">GoTo ListPage</a>
-  </div>
-  
-<!-- </div> -->
+<div style="margin-top: 100px;">
+  <a href="">GoTo ListPage</a>
+</div>
 
-<select style="margin-left: 100px;width:200px" id="dept" [(ngModel)]="currentDepartment"  (change)='change()'>
-  <option >CIVIL</option>
-  <option >MECH</option>
+<!-- </div> -->
+<h3>Select</h3>
+<select style="margin-left: 100px;width:200px" id="dept" [(ngModel)]="currentDepartment" (change)='change()'>
+  <option>CIVIL</option>
+  <option>MECH</option>
 </select>
 <select style="margin-left: 100px;width:200px" id="student">
   <option *ngFor="let i of options">{{i.name}}</option>
 </select>
+<br>
+<h3 style="margin-top: 200px">Checkbox</h3>
+<input type='checkbox' checked style="margin-left: 100px;width:200px" (change)="checkboxElement = !checkboxElement">
+<div *ngIf='checkboxElement' style="margin-left: 100px;width:200px">Displayed on demand</div>

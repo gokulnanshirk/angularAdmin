@@ -14,9 +14,11 @@ export class AdminComponent implements OnInit {
   students: any
   currentDepartment: any
   options: any
+  checkboxElement: any
   ngOnInit() {
+    this.checkboxElement = true
     this.currentDepartment = 'CIVIL'
-    this.students = [{ name: 'dinesh', dept: 'CIVIL' }, { name: 'gokul', dept: 'MECH' },{ name: 'mohan', dept: 'CIVIL' }, { name: 'nikhil', dept: 'MECH' }]
+    this.students = [{ name: 'dinesh', dept: 'CIVIL' }, { name: 'gokul', dept: 'MECH' }, { name: 'mohan', dept: 'CIVIL' }, { name: 'nikhil', dept: 'MECH' }]
     this.change()
   }
 
@@ -33,6 +35,6 @@ export class AdminComponent implements OnInit {
     this.options = this.students.filter(item => {
       return item.dept != this.currentDepartment
     })
-    console.log(this.currentDepartment,this.options, 'changed----')
+    console.log(this.currentDepartment, this.options, 'changed----')
   }
 }
